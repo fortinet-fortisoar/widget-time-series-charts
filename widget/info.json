@@ -1,0 +1,20 @@
+{
+	"name": "timeSeriesCharts",
+	"title": "Time Series Charts",
+	"subTitle": "Create flexible representations of data over time from your FortiSOAR records",
+	"version": "1.0.0",
+	"metadata": {
+		"description": "Create stacked and grouped bar-charts, line charts, or charts with a combination of different data representations",
+		"pages": [
+			"Reports",
+			"Dashboard",
+			"Listing"
+		],
+		"certified": "No",
+		"publisher": "Fortinet",
+		"compatibility": [
+			"7.3.0",
+			"7.3.1"
+		]
+	}
+}
