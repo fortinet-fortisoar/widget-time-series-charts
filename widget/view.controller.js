@@ -17,7 +17,7 @@
                 bindto: "#c3Chart-"+config.correlationValue
             };
 
-            $resource('api/3/advanced_charts/:uuid').get({uuid:$scope.config.record_uuid}).$promise.then(function(data) {  
+            $resource('api/3/time_series_charts/:uuid').get({uuid:$scope.config.record_uuid}).$promise.then(function(data) {  
                 if (!data.queryResults) {
                     $scope.noData=true;
                     $scope.processing=false;

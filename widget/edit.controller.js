@@ -125,7 +125,7 @@
                 "correlationValue": $scope.config.correlationValue,
                 "queryModified": true
             };
-            var stats_record = $resource('api/3/upsert/advanced_charts/');
+            var stats_record = $resource('api/3/upsert/time_series_charts/');
             stats_record.save(record_body).$promise.then(function(stats) {
                 // Update the config with the new uuid of the record associated with this chart
                 $scope.config.record_uuid = stats.uuid;
