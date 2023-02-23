@@ -4,10 +4,10 @@
         .module('cybersponse')
         .controller('editTimeSeriesCharts100Ctrl', editTimeSeriesCharts100Ctrl).controller('dataSetCtrl', dataSetCtrl);
 
-    editTimeSeriesCharts100Ctrl.$inject = ['$scope', '$uibModalInstance', 'config', 'appModulesService', 'Entity', '$resource', 'SORT_ORDER'];
+    editTimeSeriesCharts100Ctrl.$inject = ['$scope', '$uibModalInstance', 'config', 'appModulesService', 'Entity', '$resource', 'SORT_ORDER', 'CommonUtils'];
     dataSetCtrl.$inject = ['$scope','Entity'];
 
-    function editTimeSeriesCharts100Ctrl($scope, $uibModalInstance, config, appModulesService, Entity, $resource, SORT_ORDER) {
+    function editTimeSeriesCharts100Ctrl($scope, $uibModalInstance, config, appModulesService, Entity, $resource, SORT_ORDER, CommonUtils) {
       if (!config.dataSets) {
         config.dataSets = [];
       }
@@ -110,9 +110,8 @@
             }
             $scope.processing=true;
 
-            // Before saving we need to generate a pseudo-uuid value. There's not a good way to get a true uuid in angularjs
             if (! $scope.config.correlationValue) {
-              var uniqueValue = _generate_pseudo_uuid();
+              var uniqueValue = CommonUtils.generateUUID();
               $scope.config['correlationValue'] = uniqueValue;
             }
 
@@ -135,16 +134,6 @@
 
         function removeDataSet(dataSets, index) {
           dataSets = dataSets.splice(index, 1);
-        }
-
-        function _generate_pseudo_uuid() {
-          var d = new Date().getTime();
-          var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-            var r = (d + Math.random()*16)%16 | 0;
-            d = Math.floor(d/16);
-            return (c=='x' ? r : (r&0x3|0x8)).toString(16);
-          });
-          return uuid;
         }
 
         function adjustDataSetQuery(dataSet) {
