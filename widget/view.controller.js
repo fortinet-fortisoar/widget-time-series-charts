@@ -28,12 +28,7 @@
                     })
 
                     $timeout(function() {
-                        let chart = c3.generate(dataFormat);
-                        $scope.$on('$destroy', function() {
-                            if(chart) {
-                                chart.destroy();
-                            }
-                        })
+                        $scope.chart = c3.generate(dataFormat);
                         $scope.noData=false;
                         $scope.processing=false;
                         },
@@ -42,6 +37,12 @@
                 }
             })
         }
+
+        $scope.$on('$destroy', function() {
+            if($scope.chart) {
+                $scope.chart.destroy();
+            }
+        })
         
         init();
     }
