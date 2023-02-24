@@ -28,6 +28,10 @@
                     })
 
                     $timeout(function() {
+                        // Destroy the existing chart if init() ran before
+                        if ($scope.chart) {
+                            $scope.chart.destroy()
+                        }
                         $scope.chart = c3.generate(dataFormat);
                         $scope.noData=false;
                         $scope.processing=false;
