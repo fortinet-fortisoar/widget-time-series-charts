@@ -3,6 +3,7 @@
 	"title": "Time Series Charts",
 	"subTitle": "Create flexible representations of data over time from your FortiSOAR records",
 	"version": "1.0.0",
+	"published_date": "1678963973",
 	"metadata": {
 		"description": "Create stacked and grouped bar-charts, line charts, or charts with a combination of different data representations",
 		"pages": [
