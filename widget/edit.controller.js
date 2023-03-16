@@ -18,11 +18,8 @@
 
             $scope.moduleFields = {};
             $scope.moduleFieldsArrays = {};
-            angular.forEach($scope.config.dataSets, function(dataSet) {
-              if (!$scope.moduleFields[dataSet.resource]) {
-                populateFieldLists(dataSet.resource)
-              }
-            });
+            initializeFieldLists($scope.config.dataSets, []);
+            
         });
         $scope.cancel = cancel;
         $scope.save = save;
@@ -48,6 +45,19 @@
           'editable': true
         };
         $scope.status = {"open": true};
+
+        function initializeFieldLists(dataSets, resources) {
+          angular.forEach(dataSets, function(dataSet) {
+            if (dataSet.resource && !resources.includes(dataSet.resource)) {
+              populateFieldLists(dataSet.resource);
+              resources.push(dataSet.resource);
+            }
+            else if (dataSet.dataSets) {
+              resources = initializeFieldLists(dataSet.dataSets, resources);
+            }
+          })
+          return resources;
+        }
       
       	function selectChartType(chartType) {
             if ($scope.config.selectedChartType != chartType) {
