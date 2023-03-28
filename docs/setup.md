@@ -36,6 +36,7 @@ For each Data Set (whether individual or as a part of a Data Set Group), the fol
 
 
 Once configured, the Edit Widget interface will look similar to the following screenshots:
-<img src="raw.githubusercontent.com/fortinet-fortisoar/widget-time-series-charts/develop/docs/res/widget_config1.png" alt="Editing the Time Series Charts Widget with a single Data Set" style="border: 1px solid #A9A9A9; border-radius: 4px; padding: 10px; display: block;  margin-left: auto; margin-right: auto;">
 
-<img src="raw.githubusercontent.com/fortinet-fortisoar/widget-time-series-charts/develop/docs/res/widget_config2.png" alt="Editing the Time Series Charts Widget with grouped Data Sets" style="border: 1px solid #A9A9A9; border-radius: 4px; padding: 10px; display: block;  margin-left: auto; margin-right: auto;">
+![](./res/widget_config1.png)
+
+![](./res/widget_config2.png)

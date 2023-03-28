@@ -6,10 +6,15 @@
 	"published_date": "1678963973",
 	"metadata": {
 		"description": "Create stacked and grouped bar-charts, line charts, or charts with a combination of different data representations",
+		"help-online": "https://github.com/fortinet-fortisoar/widget-time-series-charts/blog/release/1.0.0/README.md",
 		"pages": [
 			"Reports",
 			"Dashboard",
 			"Listing"
+		],
+		"snapshots": [
+			"https://repo.fortisoar.fortinet.com/fsr-widgets/timeSeriesCharts-1.0.0/images/time-series-chart-1.png",
+			"https://repo.fortisoar.fortinet.com/fsr-widgets/timeSeriesCharts-1.0.0/images/time-series-chart-2.png"
 		],
 		"certified": "No",
 		"publisher": "Fortinet",
