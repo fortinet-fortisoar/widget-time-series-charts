@@ -7,11 +7,9 @@
 
 # Overview
 
-The Time Series Charts Widget is designed to be used as part of the Time Series Charts Solution Pack. This component of the Solution Pack creates the Time Series Chart Module records when the widget is configured, and loads query result data from them when the widget is loaded, rendering that data into a chart.
+The **Time Series Charts** widget is designed to be used as part of the **Time Series Charts Solution Pack**. This component of the solution pack creates the **Time Series Chart** module records when the widget is configured, and loads query result data since the time the widget was loaded, rendering that data into a chart.
 
 # Next Steps
 
-Use absolute links
-
-| [Installation](docs/setup.md#installation) | [Configuration](docs/setup.md#configuration) | [Usage](docs/usage.md) | [Contents](docs/contents.md) |
-|--------------------------------------------|----------------------------------------------|------------------------|------------------------------|
+| [Installation](./docs/setup.md#installation) | [Configuration](./docs/setup.md#configuration) | [Usage](./docs/usage.md) |
+|----------------------------------------------|------------------------------------------------|--------------------------|
