@@ -40,5 +40,5 @@ Once configured, the Edit Widget interface will look similar to the following sc
 
 ![](./res/widget_config2.png)
 
-| [Usage](./docs/usage.md) |
+| [Usage](./usage.md) |
 |--------------------------|
